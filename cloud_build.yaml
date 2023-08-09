@@ -1,9 +1,9 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'us-east1-docker.pkg.dev/$PROJECT_ID/demo-gcp/my-img:$SHORT_SHA', '.']
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/demo-gcp/my-img:$SHORT_SHA', '.']
     timeout: '1200s'
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'us-east1-docker.pkg.dev/$PROJECT_ID/demo-gcp/my-img:$SHORT_SHA']
+    args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/demo-gcp/my-img:$SHORT_SHA']
 
 images:
-  - 'us-east1-docker.pkg.dev/$PROJECT_ID/demo-gcp/my-img:$SHORT_SHA'
+  - 'us-central1-docker.pkg.dev/$PROJECT_ID/demo-gcp/my-img:$SHORT_SHA'
