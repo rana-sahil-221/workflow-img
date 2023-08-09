@@ -1,7 +1,7 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/gcp-demo:$SHORT_SHA', '.']
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/demo-gcp/my-img:$SHORT_SHA', '.']
     timeout: '1200s'
 
 images:
-  - 'gcr.io/$PROJECT_ID/gcp-demo:$SHORT_SHA'
+  - 'gcr.io/$PROJECT_ID/demo-gcp/my-img:$SHORT_SHA'
