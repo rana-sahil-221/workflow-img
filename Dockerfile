@@ -6,4 +6,4 @@ RUN apt install apache2 -y
 RUN apt install apache2-utils -y
 CMD ["apachectl", "-D", "FOREGROUND"]
 WORKDIR /var/www/html
-ADD application.tar.gz /var/www/html
+ADD 2106_soft_landing.zip /var/www/html
