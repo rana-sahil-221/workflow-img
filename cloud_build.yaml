@@ -1,9 +1,0 @@
-steps:
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'asia-south1-docker.pkg.dev/$PROJECT_ID/my-repo/my-img:$SHORT_SHA', '.']
-    timeout: '1200s'
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'asia-south1-docker.pkg.dev/$PROJECT_ID/my-repo/my-img:$SHORT_SHA']
-
-images:
-  - 'asia-south1-docker.pkg.dev/$PROJECT_ID/my-repo/my-img:$SHORT_SHA'
